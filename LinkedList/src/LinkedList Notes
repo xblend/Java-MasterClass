@@ -1,0 +1,42 @@
+How Objects are stored in ArrayList?
+The elements of the ArrayLists are the addresses where the objects are stored.
+Eg: A sample ArrayList of Object E might look like
+    Index   |  64bit(8byte) consecutive  memory locations  |    Value               Address     |       Object E
+            |  In 64bit machines memory address is stored in 64bits                             |
+    0       |              1024                            |    1024                  1000      |       E2
+    1       |              1032                            |    1000                  1024      |       E1
+    2       |              1040                            |    2024                  1996      |       E4
+    3       |              1048                            |    1996                  2024      |       E3
+    4       |              1056                            |    3600                  3600      |       E5
+
+
+How primitive data types are stored in Array?
+The elements of the Array of primitive data types stores the value.
+Eg: A sample Array of int type might look like
+    Index   |  32bit(4byte) consecutive  memory locations as int takes 4byte space  |    Value
+    0       |              1020                                                     |    0
+    1       |              1024                                                     |    1
+    2       |              1028                                                     |    2
+    3       |              1032                                                     |    4
+    4       |              1036                                                     |    3
+
+Eg: A sample Array of char type might look like
+    Index   |  8bit(1byte) consecutive  memory locations as char takes 1byte space  |    Value
+    0       |              1000                                                     |    'a'
+    1       |              1001                                                     |    'b'
+    2       |              1002                                                     |    'd'
+    3       |              1003                                                     |    'f'
+    4       |              1004                                                     |    'g'
+
+
+How ArrayList is slower than LinkedList?
+Consider an ArrayList containing millions of elements.
+If we try to insert or remove an element in such a big ArrayList it will take a lot of computational time to shift down
+or up the consequent elements present in that ArrayList
+With LinkedList insertion and removal requires less computational time as we can insert or remove the nodes and no
+shifting of consequent elements is required.
+However, iterating through ArrayList is much faster than LinkedList.
+In array list or arrays we can get the memory location of the nth indexed element with,
+Base Address of the Array/ArrayList + n*(memory taken by the Object/primitive data type)
+eg: address of the 3rd indexed element of a char Array can be found as:
+Base Address of char Array + 3*1byte
