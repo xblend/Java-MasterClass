@@ -29,6 +29,5 @@ public class Main {
         System.out.println(mcLaren.wheelSpeed(1000));
         mcLaren.operateClutch(false);
         System.out.println(mcLaren.wheelSpeed(1000));
-
     }
 }
