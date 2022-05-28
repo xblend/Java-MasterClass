@@ -30,10 +30,6 @@ public class Gearbox {
             //To access the variable gearNumber of class Gearbox we'll use Gearbox.this.gearNumber
             this.ratio = ratio;
         }
-
-        public double driveSpeed(int revs){
-            return revs*(this.ratio);
-        }
     }
 
     public void operateClutch(boolean in){

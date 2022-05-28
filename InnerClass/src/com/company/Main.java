@@ -1,7 +1,10 @@
 package com.company;
 
-public class Main {
+import java.util.Scanner;
 
+public class Main {
+    public static Scanner scanner = new Scanner(System.in);
+    public static Button btn = new Button("Print");
     public static void main(String[] args) {
 	    //1. Static Nested Class
         //2. Non-static Nested Class
@@ -29,5 +32,43 @@ public class Main {
         System.out.println(mcLaren.wheelSpeed(1000));
         mcLaren.operateClutch(false);
         System.out.println(mcLaren.wheelSpeed(1000));
+
+        //Local class
+        class onClickListen implements Button.onClickListener{
+            public onClickListen() {
+                System.out.println("I have been attached");
+            }
+
+            @Override
+            public void onClick(String text) {
+                System.out.println(text+" was clicked");
+            }
+        }
+        btn.setOnClickListener(new onClickListen());
+        listen();
+        //Anonymous class
+        btn.setOnClickListener(new Button.onClickListener() {
+            @Override
+            public void onClick(String text) {
+                System.out.println(text+" was clicked by an anonymous class onClick method");
+            }
+        });
+        listen();
+    }
+
+    public static void listen(){
+        boolean quit=false;
+        int ch;
+        while(!quit){
+            ch = scanner.nextInt();
+            scanner.nextLine();
+            switch (ch){
+                case 0:
+                    quit=true;
+                    break;
+                case 1:
+                    btn.onClick();
+            }
+        }
     }
 }
