@@ -30,8 +30,11 @@ public class Main {
         penguin.fly();
     }
     //Abstract vs Interface
-    //Since, we cant instantiate a interface the members should be public static type only.
+    //Since, we can't instantiate a interface the members should be static and final type only.
     //Interface can't have defined methods unlike Abstract classes
     //A child class inherits from an interface using "implements" keyword, whereas
     //A child class inherits from an abstract class using "extends" keyword.
+    //An abstract class can extend only one parent, but can implement multiple interfaces
+    //Abstract class will contain methods which are either implemented or not implemented
+    //Interface class will only contain methods which are not implemented.
 }
