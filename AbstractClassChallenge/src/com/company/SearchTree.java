@@ -1,8 +1,5 @@
 package com.company;
 
-
-import javax.swing.*;
-
 public class SearchTree implements NodeList {
     ListItem root = null;
 

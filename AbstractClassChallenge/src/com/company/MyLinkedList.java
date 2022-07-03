@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.List;
-
 public class MyLinkedList implements NodeList{
     private ListItem root;
 

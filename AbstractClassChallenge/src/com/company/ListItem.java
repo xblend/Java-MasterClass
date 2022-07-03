@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.List;
 
 public abstract class ListItem {
     protected ListItem rightLink = null;
