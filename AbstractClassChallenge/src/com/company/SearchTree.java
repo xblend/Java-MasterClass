@@ -1,7 +1,7 @@
 package com.company;
 
 public class SearchTree implements NodeList {
-    ListItem root = null;
+    private ListItem root = null;
 
     public SearchTree(ListItem root) {
         this.root = root;

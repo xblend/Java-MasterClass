@@ -67,12 +67,11 @@ public class MyLinkedList implements NodeList{
 
     @Override
     public boolean removeItem(ListItem item) {
-        System.out.println("Removing "+item.getValue());
-        if(this.root==null)
-            return false;
+        if(item!=null)
+            System.out.println("Deleting item " + item.getValue());
         ListItem currentItem = this.root;
         while(currentItem!=null) {
-            /*
+
             //My solution
             if (currentItem.compareTo(item) == 0) {
                 if(currentItem.previous()!=null) {
@@ -92,15 +91,16 @@ public class MyLinkedList implements NodeList{
                 return true;
             }
             currentItem=currentItem.next();
-            */
+
+/*
             int comparison = currentItem.compareTo(item);
             if (comparison == 0) {
-                if (currentItem == this.root)
-                    this.root = currentItem.next();
+                if (currentItem == this.root){
+                    this.root = currentItem.next();}
                 else {
                     currentItem.previous().setNext(currentItem.next());
-                    if (currentItem.next() != null)
-                        currentItem.next().setPrevious(currentItem.previous());
+                    if (currentItem.next() != null){
+                        currentItem.next().setPrevious(currentItem.previous());}
                 }
                 return true;
             }
@@ -108,13 +108,13 @@ public class MyLinkedList implements NodeList{
                 currentItem=currentItem.next();
             else
                 break;
+*/
         }
         return false;
     }
 
     @Override
     public void traverse(ListItem root) {
-        System.out.println("******************");
         if(root==null) {
             System.out.println("The list is empty");
             return;
