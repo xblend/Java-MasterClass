@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SimpleAWTGUI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../SimpleAWTGUI/out/artifacts/SimpleAWTGUI_jar/SimpleAWTGUI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
