@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1f9e875-0a9a-4bed-8f2a-58d2d8cec666" name="Changes" comment="" />
+    <list default="true" id="8f1d0cf3-ae38-4f86-8daa-dbf7fc1d76e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Scope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +24,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Cv4YR948FJh2clAuDgD8gBDHy5" />
+  <component name="ProjectId" id="2Cv8Q5G67htjKigIt9932cCZW5y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -81,13 +85,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ScopeChallenge" />
-  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="ScopeChallenge" />
+      <module name="Scope" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -99,11 +100,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f1f9e875-0a9a-4bed-8f2a-58d2d8cec666" name="Changes" comment="" />
-      <created>1659669774553</created>
+      <changelist id="8f1d0cf3-ae38-4f86-8daa-dbf7fc1d76e6" name="Changes" comment="" />
+      <created>1659671682095</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1659669774553</updated>
+      <updated>1659671682095</updated>
     </task>
     <servers />
   </component>
