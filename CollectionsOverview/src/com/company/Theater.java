@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Theater {
     private final String name;
-    private List<Seat> seats = new ArrayList<Seat>();
+    public List<Seat> seats = new ArrayList<Seat>();
     // private Collection<Seat> seats = new LinkedList<>();
     // private Collection<Seat> seats = new HashSet<>();
     // private Collection<Seat> seats = new LinkedHashSet<>();
@@ -57,13 +57,21 @@ public class Theater {
         System.out.println("Seat cannot be found in the database");
         return false;
     }
-    private class Seat implements Comparable<Seat>{
+    public class Seat implements Comparable<Seat>{
         private final String name;
         private boolean reserved;
 
         public Seat(String name) {
             this.name = name;
             this.reserved = false;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public boolean isReserved() {
+            return reserved;
         }
 
         private boolean reserve(){
