@@ -12,6 +12,7 @@ public class Location {
         this.locationID = locationID;
         this.description = description;
         this.exits = new HashMap<>();
+        this.exits.put("Q",0);
     }
 
     public int getLocationID() {
@@ -20,6 +21,10 @@ public class Location {
 
     public String getDescription() {
         return description;
+    }
+
+    public void addExits(String key, Integer value){
+        this.exits.put(key,value);
     }
 
     public Map<String, Integer> getExits() {
