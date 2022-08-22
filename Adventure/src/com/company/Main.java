@@ -44,19 +44,19 @@ public class Main {
     }
 
     public static void initialize(Map<Integer,Location> locationMap){
-        locationMap.get(1).addExits("N",5);
-        locationMap.get(1).addExits("W",2);
-        locationMap.get(1).addExits("E",3);
-        locationMap.get(1).addExits("S",4);
+        locationMap.get(1).addExit("N",5);
+        locationMap.get(1).addExit("W",2);
+        locationMap.get(1).addExit("E",3);
+        locationMap.get(1).addExit("S",4);
 
-        locationMap.get(2).addExits("N",5);
+        locationMap.get(2).addExit("N",5);
 
-        locationMap.get(3).addExits("W",1);
+        locationMap.get(3).addExit("W",1);
 
-        locationMap.get(4).addExits("N",1);
-        locationMap.get(4).addExits("W",2);
+        locationMap.get(4).addExit("N",1);
+        locationMap.get(4).addExit("W",2);
 
-        locationMap.get(5).addExits("W",2);
-        locationMap.get(5).addExits("S",1);
+        locationMap.get(5).addExit("W",2);
+        locationMap.get(5).addExit("S",1);
     }
 }

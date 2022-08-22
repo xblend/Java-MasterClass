@@ -23,7 +23,7 @@ public class Location {
         return description;
     }
 
-    public void addExits(String key, Integer value){
+    public void addExit(String key, Integer value){
         this.exits.put(key,value);
     }
 
