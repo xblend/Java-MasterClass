@@ -25,7 +25,7 @@ public class Main {
                 System.out.println(locationMap.get(currentPosition).getDescription());
             else
                 System.out.println("Location not found");
-            System.out.println("Following are the directions you can go:");
+            System.out.print("Available exits are ");
             Map<String,Integer> exits = locationMap.get(currentPosition).getExits();
             for(String k:exits.keySet())
                 System.out.print(k+", ");
