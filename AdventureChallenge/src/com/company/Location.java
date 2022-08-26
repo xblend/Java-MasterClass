@@ -15,10 +15,10 @@ public final class Location {//final keyword so that no one can inherit from thi
         //The constructor will crash the program if we parse null to exits map
         if(exits!=null) {//To avoid this we are checking the condition if the user has passed "null"
             this.exits = new HashMap<>(exits); //Parsing a copy of exits is right move
-            this.exits.put("Q", 0);
         }else{
-            this.exits=null;
+            this.exits=new HashMap<>();
         }
+        this.exits.put("Q", 0);
 
     }
 
