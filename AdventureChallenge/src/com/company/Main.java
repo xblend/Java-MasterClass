@@ -44,7 +44,7 @@ public class Main {
         //To make class Location immutable we will parse the exits while creating the object of Location class
         
         Map<String,Integer> tempMap = new HashMap<>();
-        locations.put(0, new Location(0, "You are sitting in front of a computer learning Java",tempMap));
+        locations.put(0, new Location(0, "You are sitting in front of a computer learning Java",null));
 
         tempMap = new HashMap<>();
         tempMap.put("W", 2);
