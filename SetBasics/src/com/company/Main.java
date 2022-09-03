@@ -158,6 +158,7 @@ public class Main {
         solarSystem.put(temp.getName(),temp);
         planets.add(temp);
 
+        //After overriding hashCode and equals method according to the requirement, no duplicate entries would be found
         for(HeavenlyBody planet : planets) System.out.println(planet.getName()+" : "+planet.getOrbitalPeriod());
 
     }

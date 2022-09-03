@@ -29,4 +29,24 @@ public class HeavenlyBody {
     public boolean addSatellite(HeavenlyBody satellite){
         return satellites.add(satellite);
     }
+
+    @Override
+    //public boolean equals(HeavenlyBody obj)
+    // parsing obj of HeavenlyBody as an argument we are overloading the equals method and not overriding it
+    // as to use the "equals" method for set addition we have to override the equals method.
+    public final boolean equals(Object obj)
+    {
+        if(this==obj)
+            return true;
+        if(obj==null || obj.getClass()!=this.getClass())
+            return false;
+
+        String objName = ((HeavenlyBody) obj).getName();
+        return this.name.equals(objName);
+    }
+
+    @Override
+    public final int hashCode() {
+        return this.name.hashCode()+57;
+    }
 }
