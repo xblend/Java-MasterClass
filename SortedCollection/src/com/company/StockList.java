@@ -31,13 +31,34 @@ public class StockList {
         return 0;
     }
 
-    public int sellStock(String item, int quantity){
-        StockItem sellStock = stockList.getOrDefault(item,null);
+    public int reserveStock(String name,int quantity){
+        StockItem item = stockList.get(name);
+        if(item!=null && quantity>0)
+            return item.reserve(quantity);
+        return 0;
+    }
+
+    public int unReserveStock(String name,int quantity){
+        StockItem item = stockList.get(name);
+        if(item!=null && quantity>0)
+            return item.unReserve(quantity);
+        return 0;
+    }
+
+
+    public int sellStock(String name, int quantity){
+        StockItem item = stockList.get(name);
+        if(item!=null && quantity>0)
+            return item.finalizeReserve(quantity);
+        return 0;
+        /*
+        StockItem sellStock = stockList.getOrDefault(name,null);
         if(sellStock!=null && sellStock.getQuantity()>=quantity && quantity>0){
             sellStock.adjustStock(-quantity);
             return quantity;
         }
         return 0;
+        */
     }
 
     public StockItem get(String key){

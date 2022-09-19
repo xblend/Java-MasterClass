@@ -24,6 +24,26 @@ public class Basket {
         return 0;
     }
 
+    public int removeFromBasket(StockItem item,int quantity){
+        if(item!=null && quantity>0) {
+            int fromBasket = basket.getOrDefault(item, 0);
+            int newQuantity = fromBasket-quantity;
+            if(newQuantity>0){
+                basket.put(item, newQuantity);
+                return quantity;
+            }
+            else if (newQuantity==0) {
+                basket.remove(item);
+                return quantity;
+            }
+        }
+        return 0;
+    }
+
+    public void clear(){
+        basket.clear(); //Will invoke clear() method of the Map's class
+    }
+
     public Map<StockItem,Integer> getBasket(){
         return Collections.unmodifiableMap(basket);
     }

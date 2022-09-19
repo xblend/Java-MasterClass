@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Map;
+
 public class Main {
     public static StockList stockList = new StockList();
     public static void main(String[] args) {
@@ -101,6 +103,34 @@ public class Main {
         System.out.println(stockList);
         //Both of the above statements will work and stock quantity of gold would be adjusted accordingly
 
+        Basket newBasket = new Basket("Ravi");
+        sellItem(newBasket,"orange",135); //cannot buy because 25 out of 150 are reserved.
+        sellItem(newBasket, "bread",4);
+
+        removeItem(basket,"dartboard",1);
+        removeItem(basket,"wrench",1);
+        removeItem(basket,"jam",20);
+        removeItem(basket,"gold",111);
+        removeItem(basket,"kite",10);
+        removeItem(basket,"hamburger",4);
+        removeItem(basket,"vase",10);
+        removeItem(basket,"watermelon",3);
+        removeItem(basket,"orange",10);
+
+
+        System.out.println(basket);
+        sellItem(newBasket,"orange",135);
+        System.out.println(newBasket);
+        System.out.println(stockList);
+
+        checkOut(basket);
+        System.out.println(stockList);
+        checkOut(newBasket);
+        System.out.println(stockList);
+
+
+
+
     }
 
     public static int sellItem(Basket basket, String item, int quantity){
@@ -109,11 +139,31 @@ public class Main {
              System.out.println("We don't sell "+item+" currently!");
              return 0;
          }
-         if(stockList.sellStock(item,quantity)!=0){
-             basket.addToBasket(stockItem,quantity);
-             return quantity;
+         if(stockList.reserveStock(item,quantity)!=0){
+             return basket.addToBasket(stockItem,quantity);
          }
         System.out.println("We currently don't have "+quantity+" "+item+" in stock!");
          return 0;
+    }
+
+    public static int removeItem(Basket basket, String item, int quantity){
+        StockItem stockItem = stockList.get(item);
+        if(stockItem==null){
+            System.out.println("We don't sell "+item+" currently!");
+            return 0;
+        }
+
+        if(basket.removeFromBasket(stockItem,quantity)==quantity){
+            return stockList.unReserveStock(item,quantity);
+        }
+        System.out.println("Unreserved stocks are not matching with the quantity parsed!!");
+        return 0;
+    }
+
+    public static void checkOut(Basket basket){
+        for(Map.Entry<StockItem,Integer> items : basket.getBasket().entrySet()){
+            stockList.sellStock(items.getKey().getName(),items.getValue());
+        }
+        basket.clear();//Invokes clear() method of Basket's class
     }
 }
