@@ -90,18 +90,32 @@ public class Main {
         sellItem(basket,"orange",25);
 
         System.out.println(basket);
-        System.out.println("*************************");
+        System.out.println("*************************\n");
         System.out.println(stockList);
 
         temp = new StockItem("wrench",32.32,5);
         //stockList.Items().put(temp.getName(), temp);//Not possible as we cannot do operations on the unmodifiable Map
         //But we can make the changes in the elements like
+        System.out.println("\n*********ADJUSTING GOLD'S STOCK***************");
+        /*
         stockList.Items().get("gold").adjustStock(3);
         System.out.println(stockList);
         System.out.println("*************************");
         stockList.get("gold").adjustStock(-2);
         System.out.println(stockList);
         //Both of the above statements will work and stock quantity of gold would be adjusted accordingly
+        */
+        //Correct way is to check for null entries
+
+        StockItem gold = stockList.get("gold");
+        if(gold!=null)
+            gold.adjustStock(3);
+        System.out.println(stockList);
+        gold = stockList.Items().get("gold");
+        if(gold!=null)
+            gold.adjustStock(-2);
+        System.out.println(stockList);
+        System.out.println("***********************************************\n");
 
         Basket newBasket = new Basket("Ravi");
         sellItem(newBasket,"orange",135); //cannot buy because 25 out of 150 are reserved.
@@ -127,10 +141,6 @@ public class Main {
         System.out.println(stockList);
         checkOut(newBasket);
         System.out.println(stockList);
-
-
-
-
     }
 
     public static int sellItem(Basket basket, String item, int quantity){
