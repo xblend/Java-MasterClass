@@ -16,11 +16,7 @@ public class Main {
         arrayIterator.add("Purva");
 
         while(arrayIterator.hasNext())
-            System.out.printf(arrayIterator.next()+" ");
-        System.out.printf("\n");
-        System.out.printf(arrayIterator.toString());
-
-
-
+            System.out.println(arrayIterator.next()+" ");
+        System.out.println(arrayIterator.toString());
     }
 }
